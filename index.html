@@ -14,10 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./assets/stylesheet/loader.css">
     <link rel="stylesheet" href="./assets/stylesheet/index.css">
-    <link rel="stylesheet" href="./assets/stylesheet/tablet.css" media="screen and (min-width: 760px)">
-    <link rel="stylesheet" href="./assets/stylesheet/desktop.css" media="screen and (min-width: 980px)">
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +25,7 @@
     <script src="https://kit.fontawesome.com/ae0fd6f99f.js" crossorigin="anonymous"></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/perfill.png" type="image/x-icon">
 </head>
 
 <body>
@@ -37,7 +34,7 @@
     </div>
 
     <header class="header">
-        <img src="./assets/images/logo.png" alt="Logo Portafolio" class="logo__header">
+        <img src="./assets/images/perfill.png" alt="Logo Portafolio" class="logo__header">
 
         <nav class="nav_menu not-active">
             <a href="#home" class="active">Home</a>
@@ -60,14 +57,14 @@
 
     <main>
         <!-- Home -->
-        <section class="home" id="home">
+       <section class="home" id="home">
             <picture class="container_image-home" data-aos="zoom-in">
-                <img class="image_home" src="./assets/images/logo.png" alt="Ilustración mujer y plantas">
+                <img class="image_home" src="./assets/images/perfill.png" alt="Ilustración mujer y plantas">
             </picture>
 
             <div class="home_info">
                 <div class="container_text-info">
-                    <p class="home_text-1" data-section="home" data-value="home_text-1">Hola! Soy</p>
+                    <h2 class="home_text-1" data-section="home" data-value="home_text-1">Hola! Soy</h2>
                     <p class="home_text-2" style="color: rgb(59, 118, 129);">Emerson Albiña</p>
                 </div>
 
@@ -84,23 +81,21 @@
                         desarrollo completo de proyectos cuando es necesario.</p>
                 </div>
 
+                <!-- 👇 AQUÍ ESTÁ EL CAMBIO -->
                 <div class="container_button">
                     <a href="" target="_blank">
                         <button class="cv_button" data-section="home" data-value="cv_button">Descargar CV</button>
                     </a>
-                    <a href="#contacto">
-                        <button class="contact_button" data-section="home" data-value="contact_button">Contacto</button>
-                    </a>
-                </div>
-            </div>
 
-            <div class="links">
-                <a href="" target="_blank">
-                    <img src="./assets/images/icon-linkedin.png" alt="LinkedIn" class="icon-linkedin">
-                </a>
-                <a href="https://github.com/devEmersonc" target="_blank">
-                    <img src="./assets/images/icon-github.png" alt="GitHub" class="icon-github">
-                </a>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/emerson-albi%C3%B1a/" target="_blank">
+                            <img src="./assets/images/icon-linkedin.png" alt="LinkedIn" class="icon-linkedin">
+                        </a>
+                        <a href="https://github.com/lValtiel" target="_blank">
+                            <img src="./assets/images/icon-github.png" alt="GitHub" class="icon-github">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -113,10 +108,6 @@
                     <span class="title_sobreMi">Emerson Albiña</span>
                     <span class="texto_sobreMi" data-section="sobre-mi" data-value="texto_sobreMi">Soy un desarrollador backend interesado en crear soluciones seguras y eficientes para aplicaciones web. Mi enfoque está en diseñar arquitecturas que sean escalables y confiables, mientras sigo aprendiendo y mejorando mis habilidades. Disfruto resolver problemas técnicos y colaborar en proyectos que aporten valor real. Estoy motivado por los desafíos y comprometido con el aprendizaje continuo en este campo en constante evolución.</span>
                 </div>
-
-                <picture class="container_image-sobreMi">
-                    <img class="image_sobreMi" src="./assets/images/logo.png" alt="Ilustración mujer y café">
-                </picture>
             </div>
         </section>
 
@@ -308,43 +299,15 @@
                 </div>               
             </div>
         </section>
-
-        <!-- Contacto -->
-        <section class="contacto" id="contacto">
-            <h1 data-section="contacto" data-value="title" data-aos="fade-up">Contacto</h1>
-
-            <div class="container_box--contacto" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-
-                <div class="container--contacto">
-                    <div class="container_text--contacto">
-                        <p data-section="contacto" data-value="text">Completa el siguiente formulario y me pondré en
-                            contacto contigo lo antes posible.</p>
-                    </div>
-
-                    <form id="form" class="form-contact" name="contacto-portafolio" netlify>
-                        <input id="nombre" type="text" name="name" placeholder="Nombre | Name" required>
-                        <input id="email" type="email" name="email" placeholder="E-mail" required>
-                        <input id="asunto" type="text" name="affair" placeholder="Asunto | Subject" required>
-                        <textarea id="mensaje" cols="20" rows="4" name="message" placeholder="Mensaje | Message"
-                            required></textarea>
-
-                        <div class="btn_form--contacto">
-                            <button id="btn-enviar" type="submit" data-section="contacto"
-                                data-value="btn-enviar">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
         <div class="contianer--footer">
             <div class="container_redes-footer">
-                <a href="" target="_blank">
+                <a href="https://www.linkedin.com/in/emerson-albi%C3%B1a/" target="_blank">
                     <img src="./assets/images/icon-linkedin.png" alt="LinkedIn">
                 </a>
-                <a href="https://github.com/devEmersonc" target="_blank">
+                <a href="https://github.com/lValtiel" target="_blank">
                     <img src="./assets/images/icon-github.png" alt="GitHub">
                 </a>
             </div>
