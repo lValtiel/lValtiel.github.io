@@ -1,340 +1,427 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio | Emerson Albiña Desarrollador Backend">
+
+    <meta name="description"
+        content="Portafolio de Emerson Albiña, Desarrollador Backend Junior especializado en Java y Spring Boot.">
+
     <meta name="robots" content="index,follow">
 
-    <title>Emerson Albiña | Desarrollador Backend</title>
+    <title>Emerson Albiña | Backend Developer</title>
 
-    <!-- Librerías -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./assets/stylesheet/index.css">
 
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
-    <!-- Fontawesome -->
-    <script src="https://kit.fontawesome.com/ae0fd6f99f.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/images/perfill.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="./assets/images/perfill.png"
+        type="image/x-icon">
 </head>
 
 <body>
-    <div class="container--loader">
-        <div class="loader"></div>
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        EA
+    </a>
+
+    <nav class="nav_menu">
+
+        <a href="#home" class="active">Inicio</a>
+        <a href="#sobreMi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+
+    </nav>
+
+    <div class="header_links">
+
+        <a href="https://github.com/lValtiel"
+           target="_blank"
+           rel="noopener noreferrer">
+            GitHub
+        </a>
+
     </div>
 
-    <header class="header">
-        <img src="./assets/images/perfill.png" alt="Logo Portafolio" class="logo__header">
+    <button class="menu_button" id="button" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <nav class="nav_menu not-active">
-            <a href="#home" class="active">Home</a>
-            <a href="#sobreMi" data-section="menu" data-value="item2">Sobre mí</a>
-            <a href="#habilidades" data-section="menu" data-value="item3">Habilidades</a>
-            <a href="#proyectos" data-section="menu" data-value="item5">Proyectos</a>
+</header>
 
-            <div id="flags" class="flags">
 
-            </div>
-        </nav>
+<main>
 
-        <div id="button" class="btn not-active">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
+    <!-- =========================
+         HERO
+    ========================== -->
 
-    <main>
-        <!-- Home -->
-       <section class="home" id="home">
-            <picture class="container_image-home" data-aos="zoom-in">
-                <img class="image_home" src="./assets/images/perfill.png" alt="Ilustración mujer y plantas">
-            </picture>
+    <section class="hero" id="home">
 
-            <div class="home_info">
-                <div class="container_text-info">
-                    <h2 class="home_text-1" data-section="home" data-value="home_text-1">Hola! Soy</h2>
-                    <p class="home_text-2" style="color: rgb(59, 118, 129);">Emerson Albiña</p>
-                </div>
+        <div class="hero_content">
 
-                <div>
-                    <p class="home_text-3 text-type" data-section="home" data-value="home_text-3">Desarrollador Backend
-                    </p>
-                </div>
+            <p class="hero_eyebrow">
+                BACKEND DEVELOPER
+            </p>
 
-                <div class="container_parrafo-info">
-                    <p data-section="home" data-value="parrafo-info">Me dedico al desarrollo backend, con interés en
-                        crear soluciones eficientes y escalables para aplicaciones web. Mi objetivo es construir
-                        arquitecturas seguras y confiables que impulsen un buen rendimiento. Aunque mi enfoque principal
-                        está en el backend, tengo conocimientos básicos de frontend, lo que me permite contribuir en el
-                        desarrollo completo de proyectos cuando es necesario.</p>
-                </div>
-
-                <!-- 👇 AQUÍ ESTÁ EL CAMBIO -->
-                <div class="container_button">
-                    <a href="" target="_blank">
-                        <button class="cv_button" data-section="home" data-value="cv_button">Descargar CV</button>
-                    </a>
-
-                    <div class="links">
-                        <a href="https://www.linkedin.com/in/emerson-albi%C3%B1a/" target="_blank">
-                            <img src="./assets/images/icon-linkedin.png" alt="LinkedIn" class="icon-linkedin">
-                        </a>
-                        <a href="https://github.com/lValtiel" target="_blank">
-                            <img src="./assets/images/icon-github.png" alt="GitHub" class="icon-github">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre mí -->
-        <section class="sobreMi" id="sobreMi">
-            <h1 data-section="sobre-mi" data-value="title" data-aos="fade-up">Sobre mí</h1>
-
-            <div class="container_content-sobreMi" data-aos="fade-right">
-                <div class="container_texto-sobreMi">
-                    <span class="title_sobreMi">Emerson Albiña</span>
-                    <span class="texto_sobreMi" data-section="sobre-mi" data-value="texto_sobreMi">Soy un desarrollador backend interesado en crear soluciones seguras y eficientes para aplicaciones web. Mi enfoque está en diseñar arquitecturas que sean escalables y confiables, mientras sigo aprendiendo y mejorando mis habilidades. Disfruto resolver problemas técnicos y colaborar en proyectos que aporten valor real. Estoy motivado por los desafíos y comprometido con el aprendizaje continuo en este campo en constante evolución.</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Habilidades -->
-        <section class="habilidades" id="habilidades">
-            <h1 data-section="habilidades" data-value="title" data-aos="fade-up">Habilidades</h1>
-
-            <div class="cards_container--habilidades">
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="500">
-                    <img src="./assets/images/java.png" alt="java">
-                    <p>Java</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="700">
-                    <img src="./assets/images/springboot.png" alt="spring boot">
-                    <p>Spring Boot</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/images/mysql.png" alt="mysql">
-                    <p>MySQL</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/images/angular.png" alt="angular">
-                    <p>Angular</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="500">
-                    <img src="./assets/images/icon-html.png" alt="html">
-                    <p>HTML</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="700">
-                    <img src="./assets/images/icon-css.png" alt="css">
-                    <p>CSS</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="900">
-                    <img src="./assets/images/icon-js.png" alt="javascript">
-                    <p>JavaScipt</p>
-                </div>
-
-                <div class="cards--habilidades" data-aos="fade-up" data-aos-duration="1100">
-                    <img src="./assets/images/icon-git.png" alt="git">
-                    <p>git</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proyectos -->
-        <section class="proyectos" id="proyectos">
-            <h1 data-section="proyectos" data-value="title" data-aos="fade-up">Proyectos</h1>
-
-            <div class="cards_container--proyectos">
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/github-logo.png" alt="Gestión de actividades">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">Gestión de actividades (Backend)</h2>
-                        <p data-section="proyectos" data-value="info-proyecto1">Una plataforma que facilita la inscripción y asistencia a actividades recreativas, promoviendo el bienestar y la integración social de personas mayores.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/Gestion-de-actividades" target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/doctors1.png" alt="Gestión de actividades">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">D-P Doctors</h2>
-                        <p data-section="proyectos" data-value="info-proyecto1">Una página web para conectar pacientes
-                            con especialistas médicos, permitiendo agendar citas, contactar directamente y explorar
-                            perfiles de profesionales de la salud.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/D-P-Doctors" target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/alejandria.png" alt="alejandria">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">Alejandria</h2>
-                        <p data-section="proyectos" data-value="info-proyecto1">Plataforma en línea que permite a los
-                            usuarios subir, descargar y compartir libros de forma gratuita. Ofrece una experiencia
-                            sencilla y accesible para explorar y contribuir a una colección digital de títulos,
-                            promoviendo el acceso abierto al conocimiento y la lectura.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/Alejandria" target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/github-logo.png" alt="Gestión de inventarios">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">Gestión de inventarios (Backend)</h2>
-                        <p data-section="proyectos" data-value="info-proyecto1">Sistema diseñado para optimizar la
-                            organización y control de inventarios, permitiendo registrar, actualizar y gestionar
-                            productos de manera eficiente. Incluye funcionalidades para realizar un seguimiento
-                            detallado de existencias, movimientos y reposiciones, ayudando a mantener un flujo constante
-                            en la administración de recursos.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/Gestion_de_Invertarios" target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/github-logo.png" alt="Gestión de tareas">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">Gestión de tareas (Backend)</h2>
-                        <p data-section="proyectos" data-value="info-proyecto3">Aplicación diseñada para organizar y
-                            priorizar tareas de manera eficiente. Permite a los usuarios crear, asignar, y realizar
-                            seguimiento de actividades, promoviendo la productividad y el cumplimiento de objetivos en
-                            tiempo. Ideal para uso personal o colaborativo.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/Gestion-de-tareas-BACKEND" target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cards--proyectos card_JuegoAhorcado" data-aos="zoom-in-up"
-                    data-aos-anchor-placement="center-bottom">
-                    <div class="container_imgCard--proyectos">
-                        <img src="./assets/images/pymes.png" alt="Conector Pymes">
-                    </div>
-
-                    <div class="container_textCard--proyectos">
-                        <h2 data-section="proyectos" data-value="title-proyecto1">Conector Pymes</h2>
-                            <p data-section="proyectos" data-value="info-proyecto2">Plataforma diseñada para que pequeñas y
-                                medianas empresas (PYMES) se registren, promocionen sus servicios y amplíen su alcance. Los
-                                usuarios pueden explorar negocios locales, contactar directamente con ellos y fomentar
-                                conexiones que impulsen el crecimiento y la visibilidad de las PYMES.</p>
-                    </div>
-
-                    <div class="container_btn--proyectos">
-                        <a href="https://github.com/devEmersonc/Conector-Pymes " target="_blank">
-                            <button class="btn_repo">
-                                <img src="./assets/images/icon-githubProyecto.png" alt="Repositorio de github">REPO
-                            </button>
-                        </a>
-                    </div>
-                </div>               
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contianer--footer">
-            <div class="container_redes-footer">
-                <a href="https://www.linkedin.com/in/emerson-albi%C3%B1a/" target="_blank">
-                    <img src="./assets/images/icon-linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/lValtiel" target="_blank">
-                    <img src="./assets/images/icon-github.png" alt="GitHub">
-                </a>
-            </div>
-
-            <div class="container_text--footer">
-                <span>Copyright © | Coded with</span>
-                <span style="color: #D9D9D9;">by</span>
+            <h1>
+                Hola, soy
                 <span>Emerson Albiña</span>
-            </div>
-        </div>
-    </footer>
+            </h1>
 
-    <div class="go-top-container">
-        <div class="go-top-button">
-            <i class="fas fa-chevron-up"></i>
+            <h2>
+                Java & Spring Boot Developer
+            </h2>
+
+            <p class="hero_description">
+                Desarrollador Backend con formación autodidacta
+                y experiencia práctica construyendo APIs REST,
+                sistemas de autenticación, persistencia de datos
+                y lógica de negocio con Java y Spring Boot.
+            </p>
+
+            <div class="hero_buttons">
+
+                <a href="#proyectos" class="button primary">
+                    Ver proyectos
+                </a>
+
+                <a href="https://github.com/lValtiel"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="button secondary">
+                    GitHub
+                </a>
+
+            </div>
+
         </div>
+
+        <div class="hero_visual">
+
+            <div class="code_card">
+
+                <div class="code_header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <pre><code>
+<span class="code-purple">public class</span> <span class="code-blue">Developer</span> {
+
+    <span class="code-purple">private</span> String focus =
+        <span class="code-green">"Backend"</span>;
+
+    <span class="code-purple">private</span> String stack =
+        <span class="code-green">"Java + Spring Boot"</span>;
+
+}
+                </code></pre>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE MI
+    ========================== -->
+
+    <section class="about" id="sobreMi">
+
+        <div class="section_heading">
+
+            <span>01</span>
+
+            <h2>Sobre mí</h2>
+
+        </div>
+
+        <div class="about_content">
+
+            <div class="about_title">
+
+                <h3>
+                    Construyo soluciones backend
+                    enfocadas en lógica, seguridad
+                    y mantenibilidad.
+                </h3>
+
+            </div>
+
+            <div class="about_text">
+
+                <p>
+                    Soy desarrollador backend enfocado principalmente
+                    en Java y Spring Boot. Mi formación ha sido
+                    autodidacta, complementada con proyectos personales
+                    donde he aplicado conceptos de programación orientada
+                    a objetos, arquitectura por capas, APIs REST,
+                    persistencia de datos y seguridad.
+                </p>
+
+                <p>
+                    Actualmente continúo fortaleciendo mis conocimientos
+                    mediante proyectos como NexoRF y ForgeOps,
+                    trabajando con problemas similares a los que pueden
+                    encontrarse en aplicaciones empresariales.
+                </p>
+
+                <p>
+                    Mi objetivo es incorporarme a un equipo de desarrollo
+                    donde pueda seguir creciendo como backend developer,
+                    aportar mis conocimientos y aprender de profesionales
+                    con experiencia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HABILIDADES
+    ========================== -->
+
+    <section class="skills" id="habilidades">
+
+        <div class="section_heading">
+
+            <span>02</span>
+
+            <h2>Stack tecnológico</h2>
+
+        </div>
+
+        <div class="skills_grid">
+
+            <div class="skill_card">
+                <span class="skill_number">01</span>
+                <h3>Java</h3>
+                <p>
+                    POO, colecciones, excepciones, streams,
+                    manejo de archivos y buenas prácticas.
+                </p>
+            </div>
+
+            <div class="skill_card">
+                <span class="skill_number">02</span>
+                <h3>Spring Boot</h3>
+                <p>
+                    Spring MVC, Spring Data JPA,
+                    APIs REST y arquitectura por capas.
+                </p>
+            </div>
+
+            <div class="skill_card">
+                <span class="skill_number">03</span>
+                <h3>Security</h3>
+                <p>
+                    Spring Security, JWT, autenticación,
+                    autorización y control por roles.
+                </p>
+            </div>
+
+            <div class="skill_card">
+                <span class="skill_number">04</span>
+                <h3>Testing</h3>
+                <p>
+                    Pruebas unitarias con JUnit y Mockito
+                    para servicios y controladores.
+                </p>
+            </div>
+
+            <div class="skill_card">
+                <span class="skill_number">05</span>
+                <h3>Base de datos</h3>
+                <p>
+                    MySQL, JPA, Hibernate y diseño
+                    de relaciones entre entidades.
+                </p>
+            </div>
+
+            <div class="skill_card">
+                <span class="skill_number">06</span>
+                <h3>Herramientas</h3>
+                <p>
+                    Maven, Git, GitHub, Postman,
+                    DBeaver e IntelliJ IDEA.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROYECTOS
+    ========================== -->
+
+    <section class="projects" id="proyectos">
+
+        <div class="section_heading">
+
+            <span>03</span>
+
+            <h2>Proyectos</h2>
+
+        </div>
+
+
+        <!-- NEXORF -->
+
+        <article class="project featured">
+
+            <div class="project_info">
+
+                <span class="project_label">
+                    PROYECTO DESTACADO
+                </span>
+
+                <h3>NexoRF</h3>
+
+                <p class="project_subtitle">
+                    Sistema de inventario y picking con simulación RF
+                </p>
+
+                <p>
+                    Sistema inspirado en procesos reales de operación
+                    logística, desarrollado para representar de forma
+                    simplificada el control de inventario y las
+                    operaciones de picking.
+                </p>
+
+                <p>
+                    El proyecto cuenta con un backend desarrollado en
+                    Java y Spring Boot y una aplicación cliente en JavaFX,
+                    incorporando autenticación, autorización mediante
+                    roles, persistencia de datos y lógica de negocio.
+                </p>
+
+                <div class="tech_list">
+
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>JWT</span>
+                    <span>JPA</span>
+                    <span>Hibernate</span>
+                    <span>MySQL</span>
+                    <span>JavaFX</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/lValtiel/NexoRF-BackEnd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project_link">
+
+                    Ver repositorio →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- FORGEOPS -->
+
+        <article class="project">
+
+            <div class="project_info">
+
+                <span class="project_label">
+                    EN DESARROLLO
+                </span>
+
+                <h3>ForgeOps</h3>
+
+                <p class="project_subtitle">
+                    Plataforma de trazabilidad para operaciones industriales
+                </p>
+
+                <p>
+                    Plataforma de operaciones industriales orientada al seguimiento de fallas en maquinaria, coordinación de técnicos y ejecución de órdenes de mantenimiento. El sistema permite registrar incidencias, asignar responsables, controlar el ciclo de reparación y mantener la trazabilidad de las intervenciones realizadas.
+                </p>
+
+                <div class="tech_list">
+
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>JWT</span>
+                    <span>JPA</span>
+                    <span>MySQL</span>
+                    <span>JUnit</span>
+                    <span>Mockito</span>
+
+                </div>
+
+                <a
+                    href="https://github.com/lValtiel/ForgeOps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project_link">
+
+                    Ver en GitHub →
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+
+        <strong>Emerson Albiña</strong>
+
+        <span>
+            Java & Spring Boot Backend Developer
+        </span>
+
     </div>
 
-    <!-- Archivo Js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div>
 
-    <!-- Librería de animaciones -->
-    <script>
-        AOS.init();
-    </script>
+        <a href="https://github.com/lValtiel"
+           target="_blank">
+            GitHub
+        </a>
 
-    <!-- Mi script -->
-    <script src="./script.js"></script>
+    </div>
+
+</footer>
+
+
+<script src="./script.js"></script>
+
 </body>
 
 </html>
