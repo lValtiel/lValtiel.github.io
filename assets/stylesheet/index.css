@@ -18,6 +18,9 @@ body {
     background: #0b0d0f;
     color: #e8eaed;
     line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -779,138 +782,108 @@ footer a:hover {
 @media (max-width: 850px) {
 
     .header {
-
-        padding: 0 25px;
-
+        height: 64px;
+        padding: 0 20px;
+        width: 100%;
     }
 
     .header_links {
-
         display: none;
-
     }
 
     .nav_menu {
-
         position: fixed;
-
-        top: 72px;
-
+        top: 64px;
         left: 0;
-
         width: 100%;
+        max-width: 100vw;
 
-        padding: 30px;
+        padding: 25px 20px;
 
         background: var(--background);
-
         border-bottom: 1px solid var(--border);
 
+        display: flex;
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 20px;
 
         transform: translateY(-120%);
+        transition: transform .25s ease;
 
-        transition: .25s ease;
-
+        overflow-x: hidden;
     }
 
     .nav_menu.active {
-
         transform: translateY(0);
-
     }
 
     .menu_button {
-
         display: block;
-
+        padding: 0;
+        margin: 0;
     }
 
     .hero {
-
         grid-template-columns: 1fr;
-
         gap: 50px;
-
         text-align: left;
-
     }
 
     .hero_visual {
-
         display: none;
-
     }
 
     .about_content {
-
         grid-template-columns: 1fr;
-
         gap: 40px;
-
     }
 
     .skills_grid {
-
         grid-template-columns: repeat(2, 1fr);
-
     }
-
 }
 
 
 @media (max-width: 550px) {
 
     section {
+        padding: 80px 20px;
+    }
 
-        padding: 90px 20px;
-
+    .hero {
+        min-height: calc(100vh - 64px);
     }
 
     .hero h1 {
-
-        font-size: 3rem;
-
+        font-size: 2.8rem;
+        letter-spacing: -2px;
     }
 
     .hero_buttons {
-
         flex-direction: column;
+        align-items: stretch;
+    }
 
-        align-items: flex-start;
-
+    .hero_buttons .button {
+        width: 100%;
     }
 
     .skills_grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .project_info {
-
-        padding: 30px;
-
+        padding: 30px 20px;
     }
 
     .project h3 {
-
         font-size: 2rem;
-
     }
 
     footer {
-
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 25px;
-
     }
-
 }

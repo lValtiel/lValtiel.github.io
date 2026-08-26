@@ -3,22 +3,27 @@ const navMenu = document.querySelector('.nav_menu');
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav_menu a');
 
+
 /* =========================
    MENÚ MOBILE
 ========================= */
 
-menuButton.addEventListener('click', () => {
+if (menuButton && navMenu) {
 
-    navMenu.classList.toggle('active');
+    menuButton.addEventListener('click', () => {
 
-    const isOpen = navMenu.classList.contains('active');
+        navMenu.classList.toggle('active');
 
-    menuButton.setAttribute(
-        'aria-label',
-        isOpen ? 'Cerrar menú' : 'Abrir menú'
-    );
+        const isOpen = navMenu.classList.contains('active');
 
-});
+        menuButton.setAttribute(
+            'aria-label',
+            isOpen ? 'Cerrar menú' : 'Abrir menú'
+        );
+
+    });
+
+}
 
 
 /* =========================
@@ -31,10 +36,12 @@ navLinks.forEach(link => {
 
         navMenu.classList.remove('active');
 
-        menuButton.setAttribute(
-            'aria-label',
-            'Abrir menú'
-        );
+        if (menuButton) {
+            menuButton.setAttribute(
+                'aria-label',
+                'Abrir menú'
+            );
+        }
 
     });
 
@@ -79,6 +86,32 @@ const updateActiveSection = () => {
 };
 
 
+/* =========================
+   SCROLL
+========================= */
+
 window.addEventListener('scroll', updateActiveSection);
 
 updateActiveSection();
+
+
+/* =========================
+   CERRAR MENÚ AL VOLVER A DESKTOP
+========================= */
+
+window.addEventListener('resize', () => {
+
+    if (window.innerWidth > 850 && navMenu) {
+
+        navMenu.classList.remove('active');
+
+        if (menuButton) {
+            menuButton.setAttribute(
+                'aria-label',
+                'Abrir menú'
+            );
+        }
+
+    }
+
+});
