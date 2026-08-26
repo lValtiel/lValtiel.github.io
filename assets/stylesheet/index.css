@@ -774,6 +774,23 @@ footer a:hover {
 
 }
 
+/* =========================
+   DESKTOP NAV
+========================= */
+
+@media (min-width: 851px) {
+
+    .nav_menu {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+}
 
 /* =========================================
    RESPONSIVE
@@ -781,67 +798,178 @@ footer a:hover {
 
 @media (max-width: 850px) {
 
+    /* =========================
+       HEADER MOBILE
+    ========================= */
+
     .header {
+        position: sticky;
+        top: 0;
+
         height: 64px;
+
         padding: 0 20px;
-        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: #0b0d0f;
+
+        border-bottom: 1px solid var(--border);
+
+        z-index: 1000;
     }
+
+
+    /* =========================
+       GITHUB
+    ========================= */
 
     .header_links {
         display: none;
     }
 
+
+    /* =========================
+       MENÚ
+    ========================= */
+
     .nav_menu {
+
         position: fixed;
+
         top: 64px;
         left: 0;
+
         width: 100%;
-        max-width: 100vw;
+        height: auto;
 
         padding: 25px 20px;
-
-        background: var(--background);
-        border-bottom: 1px solid var(--border);
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         gap: 20px;
 
-        transform: translateY(-120%);
-        transition: transform .25s ease;
+        background: #0b0d0f;
 
-        overflow-x: hidden;
+        /* IMPORTANTE:
+           no queremos otra línea arriba */
+        border-top: none;
+
+        border-bottom: 1px solid var(--border);
+
+        transform: translateY(-150%);
+
+        transition: transform 0.25s ease;
+
+        z-index: 999;
     }
+
 
     .nav_menu.active {
         transform: translateY(0);
     }
 
-    .menu_button {
-        display: block;
-        padding: 0;
-        margin: 0;
+
+    .nav_menu a {
+
+        font-size: 0.95rem;
+
+        padding: 5px 0;
+
     }
+
+
+    /* =========================
+       BOTÓN HAMBURGUESA
+    ========================= */
+
+    .menu_button {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        margin: 0;
+
+        background: transparent;
+
+        border: none;
+
+        cursor: pointer;
+
+    }
+
+
+    .menu_button span {
+
+        width: 24px;
+        height: 2px;
+
+        margin: 3px 0;
+
+        background: var(--text);
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
+
         grid-template-columns: 1fr;
+
         gap: 50px;
+
         text-align: left;
+
     }
+
 
     .hero_visual {
+
         display: none;
+
     }
+
+
+    /* =========================
+       SOBRE MI
+    ========================= */
 
     .about_content {
+
         grid-template-columns: 1fr;
+
         gap: 40px;
+
     }
 
+
+    /* =========================
+       HABILIDADES
+    ========================= */
+
     .skills_grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
 }
 
 
