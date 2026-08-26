@@ -1,84 +1,84 @@
-const btn = document.getElementById('button');
-const sectionAll = document.querySelectorAll('section[id]');
-const flagsElement = document.getElementById('flags');
-const textsToChange = document.querySelectorAll('[data-section]');
+const menuButton = document.getElementById('button');
+const navMenu = document.querySelector('.nav_menu');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav_menu a');
 
-/* ===== Loader =====*/
-window.addEventListener('load', () => {
-    const contenedorLoader = document.querySelector('.container--loader');
-    contenedorLoader.style.opacity = 0;
-    contenedorLoader.style.visibility = 'hidden';
-})
+/* =========================
+   MENÚ MOBILE
+========================= */
 
-/*===== Header =====*/
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('abajo', window.scrollY > 0);
+menuButton.addEventListener('click', () => {
+
+    navMenu.classList.toggle('active');
+
+    const isOpen = navMenu.classList.contains('active');
+
+    menuButton.setAttribute(
+        'aria-label',
+        isOpen ? 'Cerrar menú' : 'Abrir menú'
+    );
+
 });
 
-/*===== Boton Menu =====*/
-btn.addEventListener('click', function() {
-    if (this.classList.contains('active')) {
-        this.classList.remove('active');
-        this.classList.add('not-active');
-        document.querySelector('.nav_menu').classList.remove('active');
-        document.querySelector('.nav_menu').classList.add('not-active');
-    }
-    else {
-        this.classList.add('active');
-        this.classList.remove('not-active');
-        document.querySelector('.nav_menu').classList.remove('not-active');
-        document.querySelector('.nav_menu').classList.add('active');
-    }
-});
 
-/*===== Cambio de idioma =====*/
-const changeLanguage = async language => {
-    const requestJson = await fetch(`./languages/${language}.json`);
-    const texts = await requestJson.json();
+/* =========================
+   CERRAR MENÚ AL SELECCIONAR
+========================= */
 
-    for(const textToChange of textsToChange) {
-        const section = textToChange.dataset.section;
-        const value = textToChange.dataset.value;
+navLinks.forEach(link => {
 
-        textToChange.innerHTML = texts[section][value];
-    }
-}
+    link.addEventListener('click', () => {
 
-flagsElement.addEventListener('click', (e) => {
-    changeLanguage(e.target.parentElement.dataset.language);
-})
+        navMenu.classList.remove('active');
 
-/*===== class active por secciones =====*/
-window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
-    sectionAll.forEach((current) => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 100;
-        const sectionId = current.getAttribute('id');
+        menuButton.setAttribute(
+            'aria-label',
+            'Abrir menú'
+        );
 
-        if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
-            document.querySelector('nav a[href*=' + sectionId + ']').classList.add('active');
-        }
-        else {
-            document.querySelector('nav a[href*=' + sectionId + ']').classList.remove('active');
-        }
     });
+
 });
 
-/*===== Boton y función ir arriba =====*/
-window.onscroll = function() {
-    if (document.documentElement.scrollTop > 100) {
-        document.querySelector('.go-top-container').classList.add('show');
-    }
-    else {
-        document.querySelector('.go-top-container').classList.remove('show');
-    }
-}
 
-document.querySelector('.go-top-container').addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+/* =========================
+   SECCIÓN ACTIVA
+========================= */
+
+const updateActiveSection = () => {
+
+    const scrollPosition = window.scrollY + 150;
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionBottom
+        ) {
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            const activeLink = document.querySelector(
+                `.nav_menu a[href="#${sectionId}"]`
+            );
+
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+        }
+
     });
-});
+
+};
+
+
+window.addEventListener('scroll', updateActiveSection);
+
+updateActiveSection();
